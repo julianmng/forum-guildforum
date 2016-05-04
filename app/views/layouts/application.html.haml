@@ -1,0 +1,23 @@
+!!!
+%html
+%head
+	%title We are legion battle room forum
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	%link{ rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Jura:400,600,500", type: "text/css"}
+	%link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"}/
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+%body
+%header.main_header.clearfix
+	.wrapper
+		#logo 
+			%p We are legion battle room forum
+		#buttons
+			= link_to "New Post", new_post_path 
+.wrapper
+	%p.notice= notice
+	%p.alert= alert
+
+.wrapper
+	=yield   
+
