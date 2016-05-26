@@ -7,3 +7,9 @@
 				= time_ago_in_words(post.created_at)
 				by
 				= post.user.email
+			%p
+				= post.get_likes.size
+				Likes
+			%p
+				= post.get_dislikes.size
+				Dislikes			

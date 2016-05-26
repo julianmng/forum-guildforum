@@ -1,7 +1,17 @@
 #post_content
 	%h1= @post.title
 	%p= @post.content
-	= image_tag @post.image.url(:medium)
+	= image_tag @post.image.url(:large)
+	%p
+		= @post.get_upvotes.size
+		Likes
+	%p
+		= @post.get_downvotes.size
+		Dislikes
+	= link_to "like", like_post_path(@post), method: :get
+	= link_to "dislike", dislike_post_path(@post), method: :get
+
+	
 	
 
 	#comments
