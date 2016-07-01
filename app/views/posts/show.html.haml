@@ -8,8 +8,9 @@
 	%p
 		= @post.get_downvotes.size
 		Dislikes
-	= link_to "like", like_post_path(@post), method: :get
-	= link_to "dislike", dislike_post_path(@post), method: :get
+	.buttons	
+		= link_to "like", like_post_path(@post), method: :get	
+		= link_to "dislike", dislike_post_path(@post), method: :get
 
 	
 	
